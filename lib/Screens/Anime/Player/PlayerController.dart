@@ -576,7 +576,10 @@ class _PlayerControllerState extends State<PlayerController> {
                       episodeList[index - 1],
                       source,
                       media,
-                      () => Get.back(),
+                      () {
+                        Get.back();
+                        WakelockPlus.enable();
+                      },
                     );
                   },
                 )
@@ -605,7 +608,10 @@ class _PlayerControllerState extends State<PlayerController> {
                       episodeList[index + 1],
                       source,
                       media,
-                      () => Get.back(),
+                      () {
+                        Get.back();
+                        WakelockPlus.enable();
+                      },
                     );
                   },
                 )
